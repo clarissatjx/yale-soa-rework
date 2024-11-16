@@ -60,5 +60,5 @@ Reflecting on the tight development process, there are key areas I aim to refine
 
 ## 🚀 Deployment
 
-This project is deployed on [Vercel](https://vercel.com/). You can view the live version of the site here: **[Yale, Reworked](https://yale-rework.vercel.app/)**
+This project is deployed on [Vercel](https://vercel.com/). You can view the live version of the site here: **[Yale, Reworked](https://yale-rework.vercel.app/)** (Best viewed on desktop!)
 
