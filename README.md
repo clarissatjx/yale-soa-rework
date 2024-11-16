@@ -1,6 +1,6 @@
 # Yale SOA Website Rework  
 
-This project is a rework of the [Yale School of Art (SOA) website](https://www.art.yale.edu/), reimagined using Angular and Tailwind CSS. It documents my learning journey and highlights areas for improvement as I explored new tools and technologies.
+This project is a rework of the [Yale School of Art (SOA) Home website](https://www.art.yale.edu/), reimagined using Angular and Tailwind CSS. It documents my learning journey and highlights areas for improvement as I explored new tools and technologies.
 
 ## 😆 My Journey  
 
