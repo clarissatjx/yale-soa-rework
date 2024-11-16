@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Yale School of Art</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Include the custom styles (ensure the path is correct) -->
+  <link rel="stylesheet" href="assets/styles.css"> <!-- Adjust path if needed -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography">
+  <app-root></app-root>
+  <script>
+    window.addEventListener('scroll', function() {
+      const scrollIcon = document.getElementById('scrollIcon');
+      if (window.scrollY > 100) { // Scroll position after which the icon should disappear
+        scrollIcon.classList.add('hidden'); // Hide the icon after scroll
+      } else {
+        scrollIcon.classList.remove('hidden'); // Show the icon again when at the top
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<main
+  class="bg-[url('.././assets/images/home-bg.jpeg')] bg-repeat bg-[length:25%] relative"
+>
+  <div class="absolute inset-0 bg-white opacity-60"></div>
+  <!-- Background overlay for opacity -->
+  <div class="relative z-10">
+    <div
+      class="min-h-screen flex flex-col justify-center items-center pt-20 px-6 -mt-20"
+    >
+      <!-- Title Section -->
+      <h1
+        class="font-script text-6xl sm:text-6xl md:text-6xl lg:text-9xl text-center text-custom-black mb-6 sm:mb-8 md:mb-10"
+        style="text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3)"
+      >
+        Yale School of Art
+      </h1>
+
+      <!-- Description Section -->
+      <brn-hover-card>
+        <p
+          class="font-jacques font-normal text-sm sm:text-base md:text-base lg:text-lg text-center max-w-4xl text-gray-600 leading-relaxed"
+          brnHoverCardTrigger
+        >
+          The School of Art is one of Yale’s Graduate & Professional Schools
+          conferring MFA degrees in Graphic Design, Painting/Printmaking,
+          Photography, and Sculpture; and offers undergraduate-level art courses
+          to Yale College students. Our website exists as an ongoing
+          collaborative experiment in digital publishing and information
+          sharing. It functions as a wiki—all members of the School of Art
+          community have the ability to add new, and edit most existing content.
+        </p>
+        <hlm-hover-card-content
+          *brnHoverCardContent
+          class="font-jacques bg-white font-light text-gray-600 text-xs"
+        >
+          Last edited by: Lindsey Mancini<br />
+          Edit access: Everybody
+        </hlm-hover-card-content>
+      </brn-hover-card>
+
+      <!-- Links -->
+      <ul
+        class="flex space-x-12 mt-8 justify-center items-center max-w-lg hidden sm:flex"
+      >
+        <li>
+          <a
+            href="#happening"
+            class="font-jacques text-xs sm:text-sm md:text-base font-semibold text-muted-foreground cursor-pointer hover:text-gray-600 hover:no-underline underline transition-all duration-300 ease-in-out whitespace-nowrap"
+            >Happening at SOA</a
+          >
+        </li>
+        <li>
+          <a
+            href="#bulletin"
+            class="font-jacques text-xs sm:text-sm md:text-base font-semibold text-muted-foreground cursor-pointer hover:text-gray-600 hover:no-underline underline transition-all duration-300 ease-in-out whitespace-nowrap"
+            >Community Bulletin Board</a
+          >
+        </li>
+        <li>
+          <a
+            href="#calendars"
+            class="font-jacques text-xs sm:text-sm md:text-base font-semibold text-muted-foreground cursor-pointer hover:text-gray-600 hover:no-underline underline transition-all duration-300 ease-in-out whitespace-nowrap"
+            >Calendars and Newsletters</a
+          >
+        </li>
+      </ul>
+
+      <!-- Scroll Down Icon -->
+      <a
+        href="#contents"
+        id="scrollIcon"
+        class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+      >
+        <fa-icon
+          [icon]="faChevronDown"
+          class="text-4xl text-gray-600 cursor-pointer hover:text-gray-900 transition-all duration-300 ease-in-out"
+        ></fa-icon>
+      </a>
+    </div>
+
+    <!-- Content Section -->
+    <div id="contents" class="space-y-8 py-10">
+      <!-- Happening at SOA -->
+      <div
+        id="happening"
+        class="py-12 px-6 mx-4 bg-white bg-opacity-90 shadow-lg rounded-lg border border-gray-200"
+      >
+        <h2 class="text-3xl font-jacques font-semibold text-gray-900 mb-4">
+          Happening at SOA
+        </h2>
+        <brn-hover-card>
+          <div class="space-y-6 mb-10">
+            <!-- First Section: Visiting Artists Lectures -->
+            <div class="space-y-2">
+              <p class="font-jacques font-semibold text-lg text-gray-900">
+                Visiting Artists Lectures Schedule
+              </p>
+              <div class="flex space-x-8 font-jacques">
+                <a
+                  href="https://www.art.yale.edu/news/visiting-artist-lectures/fall-2024"
+                  class="text-teal-600 hover:text-teal-800 hover:scale-105 transition-all duration-300 focus:outline-none"
+                >
+                  Fall 2024
+                </a>
+                <a
+                  href="https://www.art.yale.edu/news/visiting-artist-lectures/spring-2024"
+                  class="text-indigo-600 hover:text-indigo-800 hover:scale-105 transition-all duration-300 focus:outline-none"
+                >
+                  Spring 2024
+                </a>
+              </div>
+            </div>
+
+            <!-- Second Section: Exhibitions -->
+            <div class="space-y-2">
+              <p class="font-jacques font-semibold text-lg text-gray-900">
+                Exhibitions
+              </p>
+              <div class="flex space-x-8 font-jacques">
+                <a
+                  href="https://www.art.yale.edu/exhibitions"
+                  class="text-teal-600 hover:text-teal-800 hover:scale-105 transition-all duration-300 focus:outline-none"
+                >
+                  Fall 2024
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hlm-hover-card-content
+            *brnHoverCardContent
+            class="font-jacques font-light text-gray-600 text-xs mt-6"
+          >
+            Last edited by: Lindsey Mancini<br />
+            Edit access: Everybody
+          </hlm-hover-card-content>
+        </brn-hover-card>
+
+        <div class="container mx-auto p-6 font-jacques">
+          <p class="text-2xl font-semibold text-gray-800 mb-8">Calendar</p>
+
+          <div class="space-y-6">
+            <div
+              *ngFor="let event of events"
+              class="bg-white shadow-lg rounded-lg p-6 transition-all duration-300 ease-in-out hover:shadow-xl relative"
+            >
+              <!-- Vertical colored bar on the left side -->
+              <div
+                class="absolute left-0 top-0 h-full w-2 bg-[#00356b] rounded-l-lg"
+              ></div>
+
+              <mat-card-header
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div class="flex-1">
+                  <h3
+                    class="text-xl font-semibold text-gray-900 sm:text-lg break-words"
+                  >
+                    {{ event.title }}
+                  </h3>
+                  <p class="text-base font-medium text-gray-600 sm:text-sm">
+                    {{ event.location }} | {{ event.date | date : "fullDate" }}
+                  </p>
+                </div>
+                <p class="text-sm text-gray-500 sm:text-xs">
+                  {{ event.time || "No time specified" }}
+                </p>
+              </mat-card-header>
+
+              <mat-card-content>
+                <!-- Event Description with Toggle (Clamped initially) -->
+                <p
+                  class="text-gray-700 mt-4 text-base transition-all duration-500 ease-in-out sm:text-sm"
+                  [ngClass]="{
+                    'max-h-[4.5rem] overflow-hidden': !event.isExpanded,
+                    'max-h-[2000px] overflow-auto': event.isExpanded
+                  }"
+                  style="transition: max-height 0.5s ease-in-out"
+                >
+                  {{ event.description }}
+                </p>
+
+                <!-- Toggle Button -->
+                <button
+                  class="mt-4 font-jacques text-blue-600 hover:text-blue-800 font-medium transition duration-200"
+                  (click)="toggleEventExpansion(event)"
+                >
+                  {{ event.isExpanded ? "Show Less" : "Show More" }}
+                </button>
+              </mat-card-content>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Bulletin Board -->
+      <div
+        id="bulletin"
+        class="py-12 px-6 mx-4 bg-white bg-opacity-90 shadow-lg rounded-lg border border-gray-200"
+      >
+        <h2 class="text-3xl font-jacques font-semibold text-gray-900 mb-6">
+          Community Bulletin Board
+        </h2>
+
+        <!-- Flex container for the bulletin messages -->
+        <div class="flex flex-wrap justify-between gap-6 font-jacques mb-10">
+          <!-- Bulletin 1 -->
+          <div
+            class="bulletin-item flex flex-col lg:w-[400px] h-[400px] bg-yellow-100 bg-opacity-80 shadow-md rounded-lg border border-gray-200 overflow-hidden"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 p-4 border-b border-gray-300 break-words"
+            >
+              From our friends at the Yale Center for Environmental Justice
+            </h3>
+            <div class="flex-1 overflow-y-auto p-4">
+              <p class="text-gray-700 text-sm leading-relaxed">
+                The Yale Center for Environmental Justice is in the process of
+                planning our fourth annual Global Environmental Justice
+                Conference, with this year focusing on the theme of
+                <strong class="font-medium">“Environmental Joy.”</strong> The
+                conference aims to explore the ways in which environmental and
+                climate justice and the communities engaged in that work
+                generate joy. Guided by the notion that the ultimate goal of
+                most environmental and climate work is to alleviate suffering
+                and increase wellbeing, Environmental Joy will explore and
+                celebrate the diverse ways that environmental justice achieves
+                this goal.
+              </p>
+              <p class="text-gray-700 text-sm leading-relaxed mt-2">
+                One facet of the conference programming we hope to organize is a
+                juried art show soliciting works from artists around the world
+                on the theme of Environmental Joy to be showcased in an
+                exhibition during the conference. We are currently seeking any
+                interested students or faculty who would be interested in
+                supporting the planning and execution of this call for art.
+              </p>
+              <p class="text-gray-700 text-sm leading-relaxed mt-2">
+                If you’re interested in learning more about the opportunity,
+                please contact
+                <a
+                  href="mailto:julia.simon@yale.edu"
+                  class="text-blue-500 underline hover:text-blue-700 font-semibold"
+                >
+                  Julia Simon </a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bulletin 2 -->
+          <div
+            class="bulletin-item flex flex-col lg:w-[400px] h-[400px] bg-yellow-100 bg-opacity-80 shadow-md rounded-lg border border-gray-200 overflow-hidden"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 p-4 border-b border-gray-300 break-words"
+            >
+              Faculty/Alumni: Post Your Art Apprenticeship/Internship
+              Opportunities for Undergraduates
+            </h3>
+            <div class="flex-1 overflow-y-scroll p-4">
+              <p class="text-gray-700 text-sm leading-relaxed">
+                The Yale Arts Apprenticeship Program is an initiative that
+                connects Yale undergraduates, particularly those on financial
+                aid, with professional arts practitioners of any discipline. As
+                an option within Yale’s Summer Experience Award (SEA) funding
+                model, the Arts Apprenticeship must fulfill the same basic
+                requirements. Additional details, as well as those specific to
+                the Arts Apprenticeship, are included below. Yale faculty,
+                alumni, or other arts practitioners interested in featuring
+                positions through the program should contact Yale’s Creative
+                Careers advisor. Which Opportunities are Eligible? Must be at
+                least 30 hours/week, for at least 8-weeks over the summer
+                months. Those 8-weeks do not have to be continuous if the
+                mentoring Arts Practitioner agrees on a different schedule. The
+                time commitment need not all be in direct contact with the Arts
+                Practitioner. Independent projects, tasks, research, etc. can
+                comprise much of the experience, as long as the Arts
+                Practitioner is checking in regularly with the student to
+                provide oversight and career-based context. The opportunity
+                cannot be with a for-profit organization. The engagement for an
+                Arts Apprenticeship should be directly with an individual Arts
+                Practitioner and not with a company. The only exception to this
+                would be if the company overseeing the apprenticeship were a
+                registered non-profit organization. For more information:
+                <a
+                  href="https://ocs.yale.edu/channels/arts-apprenticeship/"
+                  class="text-blue-500 hover:text-blue-700"
+                  target="_blank"
+                  >here</a
+                >. To post a job, contact:
+                <a
+                  href="https://ocs.yale.edu/staff-list/#derek-i-webster"
+                  class="text-blue-500 hover:text-blue-700"
+                  target="_blank"
+                  >here</a
+                >.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bulletin 3 -->
+          <div
+            class="bulletin-item flex flex-col lg:w-[400px] h-[400px] bg-yellow-100 bg-opacity-80 shadow-md rounded-lg border border-gray-200 overflow-hidden"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 p-4 border-b border-gray-300"
+            >
+              MAPPING PUBLIC ART IN NEW HAVEN
+            </h3>
+            <div class="flex-1 overflow-y-scroll p-4">
+              <p class="text-gray-700 text-sm leading-relaxed">
+                Hey everyone! I’ve been mapping public art in New Haven as part
+                of my nonprofit project
+                <strong>ArtAround</strong>, and I’d love to invite you to join
+                me, or just check it out and see what you think.
+                <a
+                  href="https://map.artaround.org/?city=New%20Haven"
+                  class="text-blue-500 underline hover:text-blue-700 font-semibold"
+                  target="_blank"
+                >
+                  New Haven map
+                </a>
+                |
+                <a
+                  href="https://artaround.org/"
+                  class="text-blue-500 underline hover:text-blue-700 font-semibold"
+                  target="_blank"
+                >
+                  ArtAround homepage </a
+                ><br />
+                <span class="text-gray-600"> <3 Lindsey </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative group p-4 mb-5 bg-gray-50 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+        >
+          <brn-hover-card>
+            <button
+              hlmBtn
+              variant="link"
+              class="flex items-center space-x-2"
+              brnHoverCardTrigger
+            >
+              <a
+                href="https://www.art.yale.edu/art.yale.edu/homepage/edit/"
+                class="text-blue-600 hover:text-blue-800 underline font-jacques font-semibold"
+              >
+                Add your project, work, thoughts, etc. here!
+              </a>
+            </button>
+            <hlm-hover-card-content
+              *brnHoverCardContent
+              class="font-jacques font-light text-gray-600 text-xs"
+            >
+              <p>Last edited by: Lindsey Mancini</p>
+              <p>Edit access: Everybody</p>
+            </hlm-hover-card-content>
+          </brn-hover-card>
+        </div>
+
+        <div
+          class="relative group p-4 mb-5 bg-gray-50 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+        >
+          <brn-hover-card>
+            <button
+              hlmBtn
+              variant="link"
+              class="flex items-center space-x-2"
+              brnHoverCardTrigger
+            >
+              <a
+                href="https://www.art.yale.edu/art.yale.edu/homepage/edit/"
+                class="text-blue-600 hover:text-blue-800 underline font-jacques font-semibold"
+              >
+                Change the homepage background here!
+              </a>
+            </button>
+            <hlm-hover-card-content
+              *brnHoverCardContent
+              class="font-jacques font-light text-gray-600 text-xs"
+            >
+              <p>Last edited by: Lindsey Mancini</p>
+              <p>Edit access: Everybody</p>
+            </hlm-hover-card-content>
+          </brn-hover-card>
+        </div>
+
+        <div
+          class="font-jacques p-6 bg-blue-50 border border-blue-200 rounded-lg shadow-sm"
+        >
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">
+            A Message from Communications
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            All members of the SoA community are invited to edit the majority of
+            the wiki however they like, but we ask that any non-curricular
+            projects or initiatives that you would like to share be added to
+            this section of the homepage. Students are also invited to reach out
+            to
+            <a
+              href="mailto:lindsey.mancini@yale.edu"
+              class="text-blue-600 underline hover:text-blue-800 font-medium"
+            >
+              Assistant Director of Communications Lindsey Mancini</a
+            >
+            if they would like additional support from the School in bringing
+            attention to their work and endeavors.
+          </p>
+        </div>
+      </div>
+
+      <!-- Calendars and Newsletters -->
+      <div
+        id="calendars"
+        class="py-12 px-6 mx-4 bg-gradient-to-r from-white to-gray-50 shadow-2xl rounded-lg border border-gray-200"
+      >
+        <!-- Header -->
+        <h2
+          class="text-4xl font-jacques font-bold text-gray-900 mb-8 text-center"
+        >
+          Calendars and Newsletters
+        </h2>
+
+        <!-- Section Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-jacques">
+          <!-- Calendar Cards -->
+          <div class="space-y-6">
+            <h3
+              class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-500 pb-2"
+            >
+              New Calendars Beginning Summer 2020
+            </h3>
+
+            <!-- Public Calendar -->
+            <div
+              class="flex items-start p-4 bg-blue-50 rounded-lg shadow hover:shadow-md transition-shadow"
+            >
+              <div class="text-blue-600 text-2xl mr-4">📅</div>
+              <div>
+                <a
+                  href="https://www.art.yale.edu/public-events"
+                  class="text-lg text-blue-600 font-medium hover:underline hover:text-blue-800"
+                >
+                  Public Calendar >>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm">
+                  Containing those events open to the public.
+                </p>
+              </div>
+            </div>
+
+            <!-- School of Art in the World -->
+            <div
+              class="flex items-start p-4 bg-green-50 rounded-lg shadow hover:shadow-md transition-shadow"
+            >
+              <div class="text-green-600 text-2xl mr-4">🎨</div>
+              <div>
+                <a
+                  href="https://www.art.yale.edu/soa-in-the-world"
+                  class="text-lg text-green-600 font-medium hover:underline hover:text-green-800"
+                >
+                  School of Art in the World >>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm">
+                  Containing events and exhibitions hosted by, led by, or
+                  featuring members of the School of Art community.
+                </p>
+              </div>
+            </div>
+
+            <!-- Community Calendar -->
+            <div
+              class="flex items-start p-4 bg-yellow-50 rounded-lg shadow hover:shadow-md transition-shadow"
+            >
+              <div class="text-yellow-600 text-2xl mr-4">🌟</div>
+              <div>
+                <a
+                  href="https://www.art.yale.edu/calendar"
+                  class="text-lg text-yellow-600 font-medium hover:underline hover:text-yellow-800"
+                >
+                  Community Calendar >>
+                </a>
+                <p class="text-gray-700 mt-1 text-sm">
+                  Containing those events open only to the SoA community.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletters Section -->
+          <div>
+            <h3
+              class="text-2xl font-semibold text-gray-800 border-b-2 border-yellow-500 pb-2"
+            >
+              Get News in Your Inbox
+            </h3>
+            <p class="text-gray-700 mt-4">
+              Stay updated with Yale School of Art by
+              <a
+                href="http://eepurl.com/c4lFMn"
+                class="text-blue-500 hover:underline hover:text-blue-700"
+                >subscribing to our newsletters:</a
+              >
+            </p>
+            <ul class="space-y-4 mt-4">
+              <!-- News From New Haven -->
+              <li
+                class="flex items-start p-4 bg-purple-50 rounded-lg shadow hover:shadow-md transition-shadow"
+              >
+                <div class="text-purple-600 text-2xl mr-4">📬</div>
+                <div>
+                  <strong class="text-lg font-medium text-purple-600"
+                    >News From New Haven</strong
+                  >
+                  <p class="text-gray-700 mt-1 text-sm">
+                    A public monthly newsletter about news and events happening
+                    on campus.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Week at SoA -->
+              <li
+                class="flex items-start p-4 bg-red-50 rounded-lg shadow hover:shadow-md transition-shadow"
+              >
+                <div class="text-red-600 text-2xl mr-4">🗓️</div>
+                <div>
+                  <strong class="text-lg font-medium text-red-600"
+                    >Week at SoA</strong
+                  >
+                  <p class="text-gray-700 mt-1 text-sm">
+                    A weekly community-only email listing SoA events as well as
+                    public and university events in New Haven.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="font-jacques text-gray-700 text-center mt-8 leading-relaxed">
+          Discover more about upcoming events and newsletters on our website.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>

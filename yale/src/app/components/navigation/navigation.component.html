@@ -1,0 +1,73 @@
+<nav class="relative p-2 bg-white opacity-80 border-b border-gray-200 z-50">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <!-- Mobile menu button -->
+      <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+        <button (click)="toggleMenu()" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-custom-black hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Logo -->
+      <div class="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
+        <a href="#" class="text-2xl font-semibold text-custom-black whitespace-nowrap font-script hover:text-gray-500 lg:mx-auto">
+          Yale Arts
+        </a>
+      </div>
+
+      <!-- Desktop Menu and Social Media Icons -->
+      <div class="hidden lg:flex lg:items-center lg:justify-between w-full">
+        <!-- Centered Menu Items -->
+        <div class="flex-1 flex justify-center space-x-4 font-serif text-custom-black rounded-md text-lg font-bold">
+          <a href="#" class="px-3 py-2 hover:text-gray-500">Home</a>
+          <a href="https://www.art.yale.edu/about" class="px-3 py-2 hover:text-gray-500">About</a>
+          <a href="https://www.art.yale.edu/apply" class="px-3 py-2 hover:text-gray-500">Apply</a>
+          <a href="https://www.art.yale.edu/exhibitions" class="px-3 py-2 hover:text-gray-500">Exhibitions</a>
+          <a href="https://www.art.yale.edu/publications" class="px-3 py-2 hover:text-gray-500">Publications</a>
+          <a href="https://www.art.yale.edu/news" class="px-3 py-2 hover:text-gray-500">News</a>
+          <a href="https://www.art.yale.edu/public-events" class="px-3 py-2 hover:text-gray-500">Events</a>
+        </div>
+      
+        <!-- Social Media Icons -->
+        <div class="flex space-x-6">
+          <a href="https://www.instagram.com/yaleschoolofart/" target="_blank" class="text-xl hover:text-pink-500">
+            <fa-icon [icon]="faInstagram"></fa-icon>
+          </a>
+          <a href="https://www.facebook.com/YaleSchoolofArt/" target="_blank" class="text-xl hover:text-blue-500">
+            <fa-icon [icon]="faFacebook"></fa-icon>
+          </a>
+          <a href="http://yaleart.org/youtube" target="_blank" class="text-xl hover:text-red-500">
+            <fa-icon [icon]="faYoutube"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div [ngClass]="{'max-h-screen opacity-100': isMenuOpen, 'max-h-0 opacity-0': !isMenuOpen}" class="lg:hidden transition-all duration-1000 ease-in-out overflow-hidden">
+      <div class="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 font-serif text-custom-black">
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">Home</a>
+        <a href="https://www.art.yale.edu/about" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">About</a>
+        <a href="https://www.art.yale.edu/apply" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">Apply</a>
+        <a href="https://www.art.yale.edu/exhibition" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">Exhibitions</a>
+        <a href="https://www.art.yale.edu/publications" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">Publications</a>
+        <a href="https://www.art.yale.edu/news" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">News</a>
+        <a href="https://www.art.yale.edu/public-events" class="block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-100 hover:text-gray-500">Events</a>
+      </div>
+      <div class="flex justify-center space-x-6 px-2 py-4">
+        <a href="https://www.instagram.com" target="_blank" class="text-xl hover:text-pink-500">
+          <fa-icon [icon]="faInstagram"></fa-icon>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="text-xl hover:text-blue-500">
+          <fa-icon [icon]="faFacebook"></fa-icon>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="text-xl hover:text-red-500">
+          <fa-icon [icon]="faYoutube"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
