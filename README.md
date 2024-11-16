@@ -5,7 +5,8 @@ This project is a rework of the [Yale School of Art (SOA) Home website](https://
 ## 😆 My Journey  
 
 This project represents several "firsts" for me:
-- **Learning Angular**: This was my first time even touching Angular (and it was MUCH HARDER than React 😢).  
+- **Learning Angular**: This was my first time even touching Angular (and it was MUCH HARDER than React 😢).
+- **Learning Typescript**: This was also my first time working with Typescript. But thank God I'm familiar with Javascript, because that prior knowledge helped me with switching to TS!
 - **Using Tailwind CSS Extensively**: I've worked with Tailwind before, but never to this extent. I did realise how useful it was compared to using pure css.  
 - **A Rushed Timeline**: I started this at 3 PM (thanks to my horrendous sleep cycle) and rushed to finish the code by 12am, deployment by 1am (so I can sleep and go to church tomorrow 🤓).  
 
