@@ -36,6 +36,11 @@ Reflecting on the tight development process, there are key areas I aim to refine
 5. **Using Spartan Library more Efficiently**
    - I used Spartan's library for one component only, but when I installed it, I imagined so many components that could be useful for this project. However, I didn't have enough time to explore it.  
    - For the calendar, I wanted to use [Spartan's Data Table](https://www.spartan.ng/components/data-table). Unfortunately, since it was my first time learning Angular, I was still quite new to all of this and I couldn't understand how to use the data table effectively. As of now, Spartan does not have a tutorial for that component, which is a shame :(
+  
+6. **Better UI**
+   - Though I worked pretty hard on the UI for this website as I had little time, I actually did not even design it at all at first. I just dived into the code.
+   - Moving forward, design will be done on Figma first.
+   - More UI elements could be added (e.g. bottom right arrow up to navigate to the top of the page)
 
 ---
 
